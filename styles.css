@@ -1,0 +1,221 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Section */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left h1 {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 2em; /* Adjust font size as needed */
+}
+
+.header-right input[type="search"] {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+/* Hero Banner */
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+.hero-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Darken background for text visibility */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Welcome Section */
+.welcome-section {
+    padding: 40px 20px;
+    text-align: center;
+    background: #fff;
+    margin: 20px 0;
+}
+
+/* Image Gallery */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    justify-content: space-around; /* Distributes items with space between them */
+    padding: 20px;
+    background: #fff;
+}
+
+.gallery-item {
+    position: relative;
+    width: 23%; /* Approx. equal width for 4 items with some spacing */
+    margin: 1%; /* Adjust margin for spacing */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px; /* Set a fixed height for thumbnails */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    display: block;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Hover effect transitions */
+}
+
+.gallery-item .caption {
+    position: absolute;
+    bottom: 0; /* Position caption at the bottom */
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05); /* Zoom effect on hover */
+    opacity: 0.8;
+}
+
+.gallery-item:hover .caption {
+    opacity: 1; /* Show caption on hover */
+}
+
+/* Responsive Image Gallery */
+@media screen and (max-width: 768px) {
+    .gallery-item {
+        width: 48%; /* Two items per row on smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery-item {
+        width: 98%; /* One item per row on very small screens */
+    }
+}
+
+/* Content Sections */
+.content-section {
+    padding: 40px 20px;
+    background: #fff;
+    margin: 20px 0;
+}
+
+.content-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.content-item img {
+    width: 45%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-item .text-content {
+    width: 50%;
+    padding: 20px;
+}
+
+.content-item.reverse-layout {
+    flex-direction: row-reverse; /* Alternating image and text alignment */
+}
+
+/* Footer Section */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+header {
+    background: #333; /* Dark background for the header */
+    color: #fff;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left h1 {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 2em;
+}
+
+/* Styling the Search Form and its elements */
+.header-right form {
+    display: flex; /* Makes the input and button align horizontally */
+    align-items: center; /* Vertically aligns the input and button */
+    margin-right: 20px;
+    background-color: #555; /* Slightly lighter background for the search container */
+    border-radius: 5px; /* Rounded corners for the search bar area */
+    overflow: hidden; /* Ensures elements inside respect the border-radius */
+}
+
+.header-right input[type="search"] {
+    padding: 8px 12px;
+    border: none;
+    background: transparent; /* Transparent background for the input itself */
+    color: white; /* Text color for the input */
+    font-size: 16px;
+    outline: none; /* Removes the default outline on focus */
+    width: 200px; /* Adjust width as needed */
+    flex-grow: 1; /* Allows the input to grow and take available space */
+}
+
+.header-right input[type="search"]::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Lighter color for placeholder text */
+}
+
+.header-right button[type="submit"] {
+    background-color: #007bff; /* Blue background for the button, change as desired */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 0 5px 5px 0; /* Rounds only the right corners of the button */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.header-right button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
